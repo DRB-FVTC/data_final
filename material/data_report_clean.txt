@@ -1,0 +1,204 @@
+
+=======================================
+FOOD DATA SUMMARY REPORT
+=======================================
+
+* OVERVIEW
+- **Shape (Rows, Columns):** (125, 61)
+- **Columns:** gpa, gender, breakfast, calories_chicken, calories_day, calories_scone, coffee, comfort_food, comfort_food_reasons, comfort_food_reasons_coded, cook, comfort_food_reasons_coded.1, cuisine, diet_current, diet_current_coded, drink, eating_changes, eating_changes_coded, eating_changes_coded1, eating_out, employment, ethnic_food, exercise, father_education, father_profession, fav_cuisine, fav_cuisine_coded, fav_food, food_childhood, fries, fruit_day, grade_level, greek_food, healthy_feeling, healthy_meal, ideal_diet, ideal_diet_coded, income, indian_food, italian_food, life_rewarding, marital_status, meals_dinner_friend, mother_education, mother_profession, nutritional_check, on_off_campus, parents_cook, pay_meal_out, persian_food, self_perception_weight, soup, sports, thai_food, tortilla_calories, turkey_calories, type_sports, veggies_day, vitamins, waffle_calories, weight
+
+---------------------------------------
+
+* COLUMNS
+- Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 125 entries, 0 to 124
+Data columns (total 61 columns):
+ #   Column                        Non-Null Count  Dtype  
+---  ------                        --------------  -----  
+ 0   gpa                           125 non-null    float64
+ 1   gender                        125 non-null    int64  
+ 2   breakfast                     125 non-null    int64  
+ 3   calories_chicken              125 non-null    int64  
+ 4   calories_day                  125 non-null    float64
+ 5   calories_scone                125 non-null    float64
+ 6   coffee                        125 non-null    int64  
+ 7   comfort_food                  125 non-null    object 
+ 8   comfort_food_reasons          125 non-null    object 
+ 9   comfort_food_reasons_coded    125 non-null    float64
+ 10  cook                          125 non-null    float64
+ 11  comfort_food_reasons_coded.1  125 non-null    int64  
+ 12  cuisine                       125 non-null    int64  
+ 13  diet_current                  125 non-null    object 
+ 14  diet_current_coded            125 non-null    int64  
+ 15  drink                         125 non-null    float64
+ 16  eating_changes                125 non-null    object 
+ 17  eating_changes_coded          125 non-null    int64  
+ 18  eating_changes_coded1         125 non-null    int64  
+ 19  eating_out                    125 non-null    int64  
+ 20  employment                    125 non-null    float64
+ 21  ethnic_food                   125 non-null    int64  
+ 22  exercise                      125 non-null    float64
+ 23  father_education              125 non-null    float64
+ 24  father_profession             125 non-null    object 
+ 25  fav_cuisine                   125 non-null    object 
+ 26  fav_cuisine_coded             125 non-null    int64  
+ 27  fav_food                      125 non-null    float64
+ 28  food_childhood                125 non-null    object 
+ 29  fries                         125 non-null    int64  
+ 30  fruit_day                     125 non-null    int64  
+ 31  grade_level                   125 non-null    int64  
+ 32  greek_food                    125 non-null    int64  
+ 33  healthy_feeling               125 non-null    int64  
+ 34  healthy_meal                  125 non-null    object 
+ 35  ideal_diet                    125 non-null    object 
+ 36  ideal_diet_coded              125 non-null    int64  
+ 37  income                        125 non-null    float64
+ 38  indian_food                   125 non-null    int64  
+ 39  italian_food                  125 non-null    int64  
+ 40  life_rewarding                125 non-null    float64
+ 41  marital_status                125 non-null    float64
+ 42  meals_dinner_friend           125 non-null    object 
+ 43  mother_education              125 non-null    float64
+ 44  mother_profession             125 non-null    object 
+ 45  nutritional_check             125 non-null    int64  
+ 46  on_off_campus                 125 non-null    float64
+ 47  parents_cook                  125 non-null    int64  
+ 48  pay_meal_out                  125 non-null    int64  
+ 49  persian_food                  125 non-null    float64
+ 50  self_perception_weight        125 non-null    float64
+ 51  soup                          125 non-null    float64
+ 52  sports                        125 non-null    float64
+ 53  thai_food                     125 non-null    int64  
+ 54  tortilla_calories             125 non-null    float64
+ 55  turkey_calories               125 non-null    int64  
+ 56  type_sports                   125 non-null    object 
+ 57  veggies_day                   125 non-null    int64  
+ 58  vitamins                      125 non-null    int64  
+ 59  waffle_calories               125 non-null    int64  
+ 60  weight                        125 non-null    float64
+dtypes: float64(21), int64(28), object(12)
+memory usage: 59.7+ KB
+
+---------------------------------------
+
+* DESCRIPTIVE STATISTICS
+              gpa      gender   breakfast  calories_chicken  calories_day  \
+count  125.000000  125.000000  125.000000        125.000000    125.000000   
+mean     3.418936    1.392000    1.112000        577.320000      3.024000   
+std      0.382553    0.490161    0.316636        131.214156      0.588382   
+min      2.200000    1.000000    1.000000        265.000000      2.000000   
+25%      3.200000    1.000000    1.000000        430.000000      3.000000   
+50%      3.500000    1.000000    1.000000        610.000000      3.000000   
+75%      3.700000    2.000000    1.000000        720.000000      3.000000   
+max      4.000000    2.000000    2.000000        720.000000      4.000000   
+
+       calories_scone     coffee  comfort_food_reasons_coded        cook  \
+count      125.000000  125.00000                  125.000000  125.000000   
+mean       504.560000    1.75200                    3.656000    2.792000   
+std        230.034198    0.43359                    2.907454    1.026236   
+min        315.000000    1.00000                    1.000000    1.000000   
+25%        420.000000    2.00000                    2.000000    2.000000   
+50%        420.000000    2.00000                    2.000000    3.000000   
+75%        420.000000    2.00000                    5.000000    3.000000   
+max        980.000000    2.00000                    9.000000    5.000000   
+
+       comfort_food_reasons_coded.1  ...  self_perception_weight       soup  \
+count                    125.000000  ...              125.000000  125.00000   
+mean                       2.688000  ...                3.120000    1.21600   
+std                        1.910987  ...                1.111523    0.41317   
+min                        1.000000  ...                1.000000    1.00000   
+25%                        2.000000  ...                2.000000    1.00000   
+50%                        2.000000  ...                3.000000    1.00000   
+75%                        3.000000  ...                4.000000    1.00000   
+max                        9.000000  ...                6.000000    2.00000   
+
+           sports   thai_food  tortilla_calories  turkey_calories  \
+count  125.000000  125.000000         125.000000       125.000000   
+mean     1.384000    3.336000         949.320000       555.040000   
+std      0.488315    1.436528         202.210909       152.370379   
+min      1.000000    1.000000         580.000000       345.000000   
+25%      1.000000    2.000000         725.000000       500.000000   
+50%      1.000000    3.000000         940.000000       500.000000   
+75%      2.000000    5.000000        1165.000000       690.000000   
+max      2.000000    5.000000        1165.000000       850.000000   
+
+       veggies_day    vitamins  waffle_calories      weight  
+count   125.000000  125.000000       125.000000  125.000000  
+mean      4.008000    1.512000      1073.400000  158.360000  
+std       1.081337    0.501867       248.667092   31.119022  
+min       1.000000    1.000000       575.000000  100.000000  
+25%       3.000000    1.000000       900.000000  135.000000  
+50%       4.000000    2.000000       900.000000  155.000000  
+75%       5.000000    2.000000      1315.000000  180.000000  
+max       5.000000    2.000000      1315.000000  265.000000  
+
+[8 rows x 49 columns]
+
+---------------------------------------
+
+* MISSING VALUES
+- Number of Missing Values Per Column:
+gpa                             0
+gender                          0
+breakfast                       0
+calories_chicken                0
+calories_day                    0
+calories_scone                  0
+coffee                          0
+comfort_food                    0
+comfort_food_reasons            0
+comfort_food_reasons_coded      0
+cook                            0
+comfort_food_reasons_coded.1    0
+cuisine                         0
+diet_current                    0
+diet_current_coded              0
+drink                           0
+eating_changes                  0
+eating_changes_coded            0
+eating_changes_coded1           0
+eating_out                      0
+employment                      0
+ethnic_food                     0
+exercise                        0
+father_education                0
+father_profession               0
+fav_cuisine                     0
+fav_cuisine_coded               0
+fav_food                        0
+food_childhood                  0
+fries                           0
+fruit_day                       0
+grade_level                     0
+greek_food                      0
+healthy_feeling                 0
+healthy_meal                    0
+ideal_diet                      0
+ideal_diet_coded                0
+income                          0
+indian_food                     0
+italian_food                    0
+life_rewarding                  0
+marital_status                  0
+meals_dinner_friend             0
+mother_education                0
+mother_profession               0
+nutritional_check               0
+on_off_campus                   0
+parents_cook                    0
+pay_meal_out                    0
+persian_food                    0
+self_perception_weight          0
+soup                            0
+sports                          0
+thai_food                       0
+tortilla_calories               0
+turkey_calories                 0
+type_sports                     0
+veggies_day                     0
+vitamins                        0
+waffle_calories                 0
+weight                          0
+
+=======================================

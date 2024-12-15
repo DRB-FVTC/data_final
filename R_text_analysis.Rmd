@@ -1,0 +1,79 @@
+---
+title: "Text Analytics for food_cleaned.csv"
+author: "David Blessent"
+date: "2024-12-15"
+output:
+  output:
+  pdf_document:
+    output_file: "material/text-analysis.pdf"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages -------
+
+```{r libraryCheck, include=FALSE}
+packages <- c(
+  "tidyverse",
+  "tidytext",
+  "textdata",
+  "topicmodels"
+)
+
+for (pkg in packages) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg)
+  }
+}
+
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(topicmodels)
+```
+
+
+## Get Data -------
+
+```{r readCsvFiles}
+clean_foods <- read.csv("material/data/food_cleaned.csv")
+clean_foods
+```
+
+
+## Format comfort_food for text analysis -------
+
+### Check data cleanliness
+
+```{r viewSample}
+print(head(clean_foods$comfort_food))
+```
+```{r nullCheck}
+print(sum(is.na(clean_foods$comfort_food)))
+```
+```{r summarize}
+print(summary(clean_foods$comfort_food))
+```
+
+### Process data set
+
+```{r filterOutNoneRows}
+clean_foods <- clean_foods[clean_foods$comfort_food != "none", ]
+print(head(clean_foods$comfort_food))
+```
+```{r covertToLowerCase}
+clean_foods$comfort_food_clean <- tolower(clean_foods$comfort_food)
+print(head(clean_foods$comfort_food_clean))
+```
+
+### Write this dataset to csv because I cant figure out how to have "frozen yogurt" instead of "frozen" and "yogurt" tokenize together.
+
+```{r madExport}
+write.csv(clean_foods, "material/data/for_tokens.csv", row.names = FALSE)
+print("Dataset written to for_tokens.csv")
+```
+
+
+
